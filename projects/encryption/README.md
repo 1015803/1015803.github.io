@@ -36,14 +36,11 @@ and the messages that you received.
 
 ### Application Layer: Turn your message into binary
 
-Everything we've done in this activity takes place in the application layer. By the time the message leaves the application
-layer, it is encoded in binary. We've been working with text for this activity for convenience, but let's see what the binary
-looks like.
+Everything we've done in this activity takes place in the application layer. By the time the message leaves the application layer, it is encoded in binary. We've been working with text for this activity for convenience, but let's see what the binary looks like.
+01010100 01101000 01100001 01110100 00100111 01110011 00100000 01110111 01101000 01100001 01110100 00100000 01001001 00100000 01110011 01100001 01101001 01100100
 
 Go back to the first encrypted message that you sent (it should be in `rsa_encryption_activity/send/encrypted_message.b64`).
-
 This message is represented as a string of letters, numbers, and symbols. But we know that the real message is in binary.
-
 Select the first six characters from this message and copy them here:
 
 Using the ASCII table, convert these five characters to binary (if necessary,
