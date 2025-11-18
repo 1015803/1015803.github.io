@@ -4,9 +4,16 @@
 ## Part 1: Key Exchange
 
 My Key:
-My Partner's Key:
+My Partner's Key:MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEArN/32gx9dj/xeVLCYwdNHmkOwXkft6N2XpqlM/kZ4zzvHPVfL2TBcFfohvTKYBUAnbEpyhvgtWMTzoGTsgbv
+BRDwEzQ0Kv0zCaKwgk6v5P+Zx/x24EmSZmEJKr4qjwl7jYIoHna0DwxTqNbeu1r9
+SKjGZfd3my45EwTDWBPS/y3VnWHy28e7leMCzlZBOQAQ+agk+39efEssZdSqBckS
+YEQcz4QRpA7cUnxwhXTL3mtnBbKcbUkmdxbmpQVlDRse06r3wR4CNexJ+orJCb6H
+YVruzasV7qo/JcDpoMlBeI1mKIafSfn+C0Tp93tItzdjo/euncbPYVL2AJPVdcIi
+gGdXdjQIwsZmJuVgLuxrzqfyYpMas2MzJjDAJEPDdoMYJJf/lT3fhtXyCwGiA1Hc
+RskWy9U1w8ZBUSJfPTvZg6Wzy6WpoCppQYD+f1uUqBrHm476qn1go4CfD/pKSMJM
+keORu+LdFOoLq49UT2mF8Yq3BvrjNOv+yBm2ocELHfj/AgMBAAE=
 
-Our initial shared key:
+Our initial shared key:7
 
 ## Part 2: Messaging
 
@@ -18,10 +25,12 @@ and the messages that you received.
 
 | Encoded Message | Decoded Message | Key |
 | --------------- | --------------- | --- |
-|                 |                 |     |
-|                 |                 |     |
-|                 |                 |     |
-|                 |                 |     |
+| VBIXK?          |Ciper?           |  7  |
+|Vjcvu pqv jqy aqw|Thats not how you|  2  |
+|urgnn earjgt.    |spell cypher     |     |
+|VG’F PVCURE      |IT'S CIPHER      |  13 |
+|Nbunm qbun C mucx|Thats what I said|  20 |
+
 
 
 ## Part 3: Connection to TCP/IP Model
