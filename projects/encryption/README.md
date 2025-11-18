@@ -26,8 +26,7 @@ and the messages that you received.
 | Encoded Message | Decoded Message | Key |
 | --------------- | --------------- | --- |
 | VBIXK?          |Ciper?           |  7  |
-|Vjcvu pqv jqy aqw|Thats not how you|  2  |
-|urgnn earjgt.    |spell cypher     |     |
+|Vjcvu pqv jqy aqw urgnn earjgt. |Thats not how you spell cypher|  2  |
 |VG’F PVCURE      |IT'S CIPHER      |  13 |
 |Nbunm qbun C mucx|Thats what I said|  20 |
 
