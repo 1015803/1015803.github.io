@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>This is my portrait</title>
+		<style>
+			canvas {
+				border: black 1px solid;
+				}
+		</style>
+	</head>
+	<body>
+		<h1>This is my portrait</h1>
+		<canvas id="canvas" width="1000" height="1000">
+		</canvas>
+		<script>
+			//functions
+
+
+			function background(sx, sy, color) {
+				ctx.fillStyle = color;
+				ctx.fillRect(0, 0, sx, sy,);
+			}
+
+			function triangle(x1, y1, x2, y2, x3, y3, color) {// (point 1 x, point 1 y, point 2 x, point 2 y, point3 x, point 3 y, color of triangle)
+				ctx.fillStyle = color;
+				ctx.beginPath();
+ 	                        ctx.moveTo(x1, y1);//point 1
+       		                ctx.lineTo(x2, y2);//point 2
+ 	                        ctx.lineTo(x3, y3);//point 3
+				ctx.fill();
+			}
+
+			function oval(x1, y1, height, width, rotation, portion, color) {// (center x, center y, width, height, rotation in degrees, states 1/2 or whole, color)
+				ctx.fillStyle = color; 
+				ctx.beginPath();
+				rotation = (rotation * Math.PI / 180.0);//turns degrees into radians
+				if (portion = "half") {
+					ctx.ellipse(x1, y1, height, width, rotation, 0, 1*Math.PI);//dont f, with 0 no clue what it does
+				}
+				if (portion = "whole") {
+					ctx.ellipse(x1, y1, height, width, rotation, 0, 2*Math.PI);//dont change 0!
+				}
+				ctx.fill();
+			}
+
+			function circle(x1, y1, r, rotation, portion, color) {// (center x, center y, radius, rotation in degrees, states 1/2 or whole, color)
+				ctx.fillStyle = color;                          
+                                ctx.beginPath();                                
+                                rotation = (rotation * Math.PI / 180.0);//turns degrees into radians
+				if (portion = "half") {                         
+					ctx.ellipse(x1, y1, r, r, rotation, 0, 1*Math.PI);//dont f, with 0 no clue what it do    es
+                                }                                               
+                                if (portion = "whole") {                        
+                                        ctx.ellipse(x1, y1, r, r, rotation, 0, 2*Math.PI);//dont change 0!
+                                }                                               
+                                ctx.fill();
+			}
+
+			function square (x, y, size, color) {
+				ctx.fillStyle = color;
+				ctx.fillRect(x, y, size, size);
+			}
+
+			function rectangle (x1, y1, x2, y2, color) {//x2 is distance from x1 for some reason
+				ctx.fillStyle = color;
+				ctx.fillRect(x1, y1, x2, y2);
+			}
+//Main code
+			//setup
+				const canvas = document.getElementById("canvas");
+				const ctx = canvas.getContext("2d");
+				background(1000, 1000, "gray");
+			//head
+				oval(500, 385, 125, 165, 0, "whole", "tan");
+			//hair
+				oval(500, 250, 150, 50, 0, "whole", "saddlebrown");
+				oval(375, 300, 50, 75, 20, "whole", "saddlebrown");
+				oval(625, 300, 50, 75, -20, "whole", "saddlebrown");
+			//ears
+				oval(350, 380, 28, 55, 0, "whole", "tan");
+				oval(650, 380, 28, 55, 0, "whole", "tan");
+			//eyes
+				//base
+					oval(445, 345, 34, 22, 0, "whole", "white");
+					oval(555, 345, 34, 22, 0, "whole", "white");
+				//colored parts
+					circle(445, 345, 13, 0, "whole", "black");
+					circle(555, 345, 13, 0, "whole", "black");
+				//pupils
+					circle(450, 340, 4, 0, "whole", "white");
+					circle(560, 340, 4, 0, "whole", "white");
+			//eyebrows
+				rectangle(395, 305, 95, 14, "saddlebrown");
+				rectangle(510, 305, 95, 14, "saddlebrown");
+			//nose
+				triangle(500, 355, 490, 415, 510, 415, "saddlebrown");
+				oval(500, 420, 18, 8, 0, "whole", "saddlebrown");
+				circle(493, 420, 4, 0, "whole", "black");
+				circle(507, 420, 4, 0, "whole", "black"); 
+			//mouth
+				oval(500, 465, 45, 20, 0, "whole", "pink");
+				rectangle(455, 460, 90, 8, "red");
+			//neck
+				rectangle(455, 520, 90, 110, "tan");
+			//shirt
+				rectangle(320, 590, 360, 1000, "lightgray");
+				square(220, 590, 100, "lightgray");
+				square(680, 590, 100, "lightgray");
+			//arms
+				rectangle(235, 690, 80, 1000, "tan");
+				rectangle(685, 690, 80, 1000, "tan");
+
+
+
+
+
+		</script>
+	</body>
+</html>
