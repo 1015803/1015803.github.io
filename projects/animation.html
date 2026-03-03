@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html lang ="en">
+	<head>
+		<title>Animation</title>
+	</head>
+	<body>
+		 <canvas id="myCanvas"
+                          width=800
+                          height=800>
+                 </canvas>
+		<script>
+			//setup
+			const canvas = document
+			.getElementById("myCanvas");
+			const ctx = canvas.getContext("2d");
+			//functions
+			function person(x, y){
+				ctx.clearRect(0, 0, 800, 800);
+				ctx.fillRect(x, y, 10, 10);  
+				requestAnimationFrame(person);
+			}
+			//main
+			person(0, 0);
+		</script>
+	</body>
+</html>
