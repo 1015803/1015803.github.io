@@ -14,13 +14,51 @@
 			.getElementById("myCanvas");
 			const ctx = canvas.getContext("2d");
 			//functions
-			function person(x, y){
+			function draw_person(x, y){
+				ctx.fillRect(x, y, 10, 10);  	
+			}
+			function band(){
+				x = x+1;
 				ctx.clearRect(0, 0, 800, 800);
-				ctx.fillRect(x, y, 10, 10);  
-				requestAnimationFrame(person);
+				if (x>800){
+					x=0;
+					if (z==1){
+						z=2;
+						console.log("good1");
+					}
+					else if (z==2){
+						z=1;
+						console.log("good2");
+					}
+				}
+				if (z==1){
+					draw_person(x,0);
+					draw_person(x, 50);
+					draw_person(x, 100);
+					draw_person(x, 150);
+					draw_person(x, 200);
+					draw_person(x, 250);
+					draw_person(x, 300);
+					draw_person(x, 350);
+				}
+				if (z==2){
+					draw_person(x, 400);
+					draw_person(x, 450);
+					draw_person(x, 500);
+					draw_person(x, 550);
+					draw_person(x, 600);
+					draw_person(x, 650);
+					draw_person(x, 700);
+					draw_person(x, 750); 
+				}
+				console.log(z);
+				requestAnimationFrame(band);
 			}
 			//main
-			person(0, 0);
+			let z = 1;
+			let x = 0;
+			console.log(z);
+			band();
 		</script>
 	</body>
 </html>
