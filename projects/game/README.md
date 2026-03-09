@@ -1,1 +1,1 @@
-
+The idea for this game is a mostly historically acurate dipiction of japan in the 16th centurary during lord nobunagas reign. the objective is to assasianate or kill him as quickly as possible which is tracked by the globle variable days.
