@@ -1,4 +1,7 @@
 //core functions that do important stuff
+function image(imageFile) {
+	document.getElementById("image").src = imageFile;
+}
 function print(text) {
 	document.getElementById("output").innerHTML += "<br>" + text ;
 }
@@ -20,34 +23,55 @@ function askQuestion(question, options) {
   print(question);
   showChoices(options);
 }
-function scene1() {
-  askQuestion("Question 1", [
-    {
-      text: "A",
-      action: function () {
-        scene2();
-      }
-    }
-  ]);
+//start
+function start(){
+	print("We have been waiting for, you see our country has been taken over by the ruthless war lord Oda Nobunaga");
+	print("We need your help to take our country back!");
+	kyoto();
 }
-function scene2() {
-  askQuestion("Question 2", [
-    {
-      text: "B",
-      action: function () {
-        scene3();
-      }
-    }
-  ]);
+//actions
+function travel() {
+	print ("travel");
 }
-function scene3() {
-  askQuestion("Question 3", [
-    {
-      text: "C",
-      action: function () {
-        print("End.");
-      }
-    }
-  ]);
+function train() {
+	print ("train");
 }
-scene1();
+function fight() {
+	print ("fight");
+}
+function search() {
+	print ("search");
+}
+//locations
+function kyoto() {
+	image("images/kyoto.jpeg");
+	print("Hello Samuri, welcome to Kyoto!");
+	print("Theres lots of things to do, but first be careful dont go to Honno-ji temple unless you ready to take on Lord Nobunaga");
+  	askQuestion("What would you like to do first", [
+    		{
+      			text: "train",
+      			action: function () {
+        			train();
+			}
+      		},
+		{
+                	text: "travel",
+			action: function () { 
+				travel();
+                	}
+		},
+		{                                                               
+	                text: "fight",                                                  
+        	        action: function () {
+				fight();                                                
+			}
+		},
+		{                                                               
+              	   text: "search",                                                  
+              	   action: function () {
+				 search();
+		   }
+		}
+  	]);
+}
+start();
