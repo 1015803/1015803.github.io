@@ -31,7 +31,44 @@ function start(){
 }
 //actions
 function travel() {
-	print ("travel");
+  askQuestion("Where would you like to travel?", [
+    {
+      text: "Kyoto",
+      action: function () {
+        kyoto();
+      }
+    },
+    {
+      text: "Sakai",
+      action: function () {
+        sakai();
+      }
+    },
+    {
+      text: "Osaka",
+      action: function () {
+        osaka();
+      }
+    },
+    {
+      text: "Nara",
+      action: function () {
+        nara();
+      }
+    },
+    {
+      text: "Odawara",
+      action: function () {
+        odawara();
+      }
+    },
+    {
+      text: "Yamaguchi",
+      action: function () {
+        yamaguchi();
+      }
+    }
+  ]);
 }
 function train() {
 	print ("train");
@@ -73,5 +110,155 @@ function kyoto() {
 		   }
 		}
   	]);
+}
+function sakai() {
+  image("images/sakai.jpeg");
+  print("You arrive in Sakai.");
+  askQuestion("What would you like to do in Sakai?", [
+    {
+      text: "fight",
+      action: function () {
+        fight();
+      }
+    },
+    {
+      text: "train",
+      action: function () {
+        train();
+      }
+    },
+    {
+      text: "travel",
+      action: function () {
+        travel();
+      }
+    },
+    {
+      text: "search",
+      action: function () {
+        search();
+      }
+    }
+  ]);
+}
+function osaka() {
+  image("images/osaka.jpeg");
+  print("You arrive in Osaka.");
+  askQuestion("What would you like to do in Osaka?", [
+    {
+      text: "fight",
+      action: function () {
+        fight();
+      }
+    },
+    {
+      text: "train",
+      action: function () {
+        train();
+      }
+    },
+    {
+      text: "travel",
+      action: function () {
+        travel();
+      }
+    },
+    {
+      text: "search",
+      action: function () {
+        search();
+      }
+    }
+  ]);
+}
+function nara() {
+  image("images/nara.jpeg");
+  print("You arrive in Nara.");
+  askQuestion("What would you like to do in Nara?", [
+    {
+      text: "fight",
+      action: function () {
+        fight();
+      }
+    },
+    {
+      text: "train",
+      action: function () {
+        train();
+      }
+    },
+    {
+      text: "travel",
+      action: function () {
+        travel();
+      }
+    },
+    {
+      text: "search",
+      action: function () {
+        search();
+      }
+    }
+  ]);
+}
+function odawara() {
+  image("images/odawara.jpeg");
+  print("You arrive in Odawara.");
+  askQuestion("What would you like to do in Odawara?", [
+    {
+      text: "fight",
+      action: function () {
+        fight();
+      }
+    },
+    {
+      text: "train",
+      action: function () {
+        train();
+      }
+    },
+    {
+      text: "travel",
+      action: function () {
+        travel();
+      }
+    },
+    {
+      text: "search",
+      action: function () {
+        search();
+      }
+    }
+  ]);
+}
+function yamaguchi() {
+  image("images/yamaguchi.jpeg");
+  print("You arrive in Yamaguchi.");
+  askQuestion("What would you like to do in Yamaguchi?", [
+    {
+      text: "fight",
+      action: function () {
+        fight();
+      }
+    },
+    {
+      text: "train",
+      action: function () {
+        train();
+      }
+    },
+    {
+      text: "travel",
+      action: function () {
+        travel();
+      }
+    },
+    {
+      text: "search",
+      action: function () {
+        search();
+      }
+    }
+  ]);
 }
 start();
